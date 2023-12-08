@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Selectores avanzados</title>
+  </head>
+  <body>
+    <!-- div, section, article, ul, aside, header, nav, footer -->
+    <!-- camelcase selector hermano = selectorHermanoSegundo -->
+    <!-- snakecase selector hermano = selector_hermano o selector-hermano -->
+
+    <a href="./pages/pseudoselectores.html">Ir a Pseudoelementos</a>
+
+    <!-- selector hermano ó hermano adyacente -->
+    <section id="selectorHermano">
+      <h2>Selector Hermano</h2>
+      <p>parrafo dummy 2</p>
+      <h3>Titulo H3</h3>
+      <p>parrafo dummy 2</p>
+      <span>parrafo dummy</span>
+      <p>parrafo dummy 3</p>
+      <p>parrafo dummy 4</p>
+    </section>
+
+    <!-- selector hermano general -->
+    <section id="selectorHermanoGeneral">
+      <h2>Selector Hermano General</h2>
+      <button>click me 4</button>
+
+      <h5>selector hermano general</h5>
+      <button>click me</button>
+      <span> etiqueta span </span>
+      <span> etiqueta span </span>
+      <button>click me 2</button>
+    </section>
+
+    <!-- selector hijo -->
+    <section id="selectorHijo">
+      <h2>selector hijo</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia
+        maiores omnis totam numquam quae unde nihil ex deserunt libero, nulla
+        modi obcaecati, laboriosam repellat magni debitis. Sequi ad dolores
+        beatae.
+      </p>
+
+      <div>
+        <p>parrafo nieto 2</p>
+        <a href="#">enlace nieto</a>
+      </div>
+
+      <a href="">enlace hijo</a>
+    </section>
+
+    <!-- selector de atributos -->
+    <section id="selectorAtributo">
+      <a href="https://www.google.com">google.com</a>
+      <a href="https://www.kodemia.mx">kodemia</a>
+
+      <input type="text" />
+      <br />
+      <input type="password" />
+    </section>
+  </body>
+</html>

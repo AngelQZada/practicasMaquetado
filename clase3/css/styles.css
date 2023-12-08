@@ -1,0 +1,200 @@
+body {
+    font-family: "Roboto", sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+  }
+  
+  /* selector hermano  (+)
+      selecciona a LA PRIMERA  etiquetas hermana
+      del selector que esta a la izquiera del +.
+   */
+  #selectorHermano h3 + p {
+    color: brown;
+    font-size: 28px;
+  }
+  
+  /* selector hermano general (~)
+      selecciona a TODAS las etiquetas hermanos
+      del selector que esta a la izquiera del ~.
+   */
+  #selectorHermanoGeneral h5 ~ button {
+    background-color: blue;
+    color: white;
+  }
+  
+  /* selector hijo (>)
+      selecciona a los hijos directos de
+      la etiqueta padre.
+      selecciona las etiquetas p que esten 
+      directamente del section con id #selectorHijo
+   */
+  #selectorHijo > p {
+    text-decoration: underline;
+    font-style: italic;
+  }
+  
+  #selectorHijo > div > a {
+    font-size: 50px;
+  }
+  
+  /* selector atributo */
+  /* a[href="https://www.google.com"]
+  {
+    color: green;
+  } */
+  
+  input[type="text"] {
+    width: 400px;
+    border-radius: 10px;
+    margin: 20px;
+  }
+  
+  #selectorHermano,
+  #selectorHermanoGeneral,
+  #selectorHijo,
+  #selectorAtributo {
+    background-color: #e3e3e3;
+    width: 600px;
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  /* pseudoselectores y pseudoelementos */
+  .btn {
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid rgb(70, 70, 200);
+    color: rgb(70, 70, 200);
+    cursor: pointer;
+  }
+  
+  /* 
+    para acceder a los pseudoselectores, 
+    se utiliza ":" despues del selector 
+    hover = el estado cuando ponemos el mouse sobre un elemento
+    */
+  
+  /* 
+    se cambia el background-color y 
+    el color de texto cuando el mouse pasa por el boton
+    */
+  .btn:hover {
+    background-color: rgb(70, 70, 200);
+    color: white;
+  }
+  
+  /* filter permite aplicar filtros a las imagenes
+      sepia() va de de 0 0.1 hasta 1, siendo 1 el valor
+      con mayor intensidad del filtro
+   */
+  .imgHover:hover {
+    filter: sepia(1);
+  }
+  
+  /* enlaces */
+  /* :visited, afecta los enlaces que ya hemos visitado */
+  a:visited {
+    color: rgb(60, 82, 82);
+  }
+  
+  /* :visited, afecta los enlaces que aun NO hemos visitado */
+  a:link {
+    color: darksalmon;
+  }
+  
+  /* :active afecta los estilos de los enlaces cuando estan recibiendo un click  */
+  
+  a:active {
+    color: rgb(70, 70, 8);
+    text-decoration: none;
+  }
+  
+  /* lista cajas */
+  .listaCajas {
+    list-style: none;
+  }
+  
+  .listaCajas li {
+    width: 50px;
+    height: 50px;
+    background-color: #e3dee3;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  /* first-child :selecciona el primer elemento hijo 
+          que sea li dentro la lista con
+          la clase listaNumeros  
+  */
+  .listaCajas li:first-child {
+    background-color: black;
+    height: 80px;
+    width: 80px;
+    color: white;
+  }
+  
+  /* last-child : selecciona el ultimo elemento hijo 
+                  que sea li dentro la lista con
+                  la clase listaNumeros
+  */
+  .listaCajas li:last-child {
+    background-color: red;
+    height: 80px;
+    width: 80px;
+    color: white;
+  }
+  
+  /* nth-child(): selecciona el elemento hijo 
+                  que sea li dentro la lista con
+                  la clase listaCajas en base a un indice.
+                  Busca de arriba hacia abajo
+  */
+  .listaCajas li:nth-child(3) {
+    width: 200px;
+  }
+  
+  .listaCajas li:nth-child(4) {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* nth-last-child(): selecciona el elemento hijo 
+                  que sea li dentro la lista con
+                  la clase listaCajas  en base a un indice.
+                  busca de abajo hacia arriba
+  */
+  .listaCajas li:nth-last-child(4) {
+    border-radius: 100%;
+  }
+  
+  /* Pseudoelementos */
+  
+  /* 
+    para acceder a los pseudoelementos, utilizamos "::"
+    despues del selector.
+  
+    
+  */
+  
+  /* ::before agrega contenido antes de que 
+    el selector sea renderizado en el navegador,
+    el contenido que se agrega no es contenido HTML
+    por lo tanto no tiene interactividad
+  */
+  .before::before {
+    content: "hola";
+  }
+  
+  /* ::after agrega contenido despues de que 
+    el selector sea renderizado en el navegador,
+    el contenido que se agrega no es contenido HTML
+    por lo tanto no tiene interactividad
+  */
+  .after::after {
+    content: "me creo despues de renderizar";
+  }
+  
+  /* :first-letter selecciona la primera letra del selector */
+  .firstLetter::first-letter {
+    font-size: 45px;
+    font-style: italic;
+  }
