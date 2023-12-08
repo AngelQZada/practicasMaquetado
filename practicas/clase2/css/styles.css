@@ -1,4 +1,15 @@
-ul {
-    list-style: none;
-    font-size: 50px;
+body {
+    background-color: #1c1e1f;
+}
+
+.tityparrVerdes {
+    color: #D1CDC7;
+}
+
+.enlVerde {
+    color: #7DEDA5;
+}
+
+.enlVerde a {
+    color: #7DEDA5;
 }
