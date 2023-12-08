@@ -1,0 +1,211 @@
+/* normalizer o reset */
+/* le quitamos el margin y padding a todas
+las etiquetas de la pagina
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    color: white;
+    margin: 10px;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  /* Posicioamiento */
+  /* position relative
+      habilita las propiedades
+      de direccion
+      top, left, bottom, right.
+   */
+  .posicionRelativa {
+    position: relative;
+  }
+  
+  /* Para mover el elemento desde el lado derecho
+      se usan valores negativos
+      como left:-20px o right:20px */
+  .cajaRelativa {
+    top: 50px;
+    left: -10px;
+    /* right: 10px;
+    bottom: 10px; */
+  }
+  
+  /* Position: Fixed
+    los elementos fixed se posicionan
+    en base a la ventana del navegador (Window)
+    y se quedan completamente fijos en la posicion 
+    establecida.
+   */
+  .posicionFixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+  
+  /* z-index 
+    nos permite elegir la capa
+    en que se posicionan los elementos que tengan 
+    una posicion diferente a la static
+  */
+  .box.boxAzul.posicionFixed {
+    z-index: 2;
+  }
+  
+  /* 
+      position absolute 
+      hay 2 casos. 
+          1) los elementos se posicionan de forma absoluta con el documento
+              el documento es el area visible de la pagina
+          2) los elementos se posicionan de forma absoluta con el primer elemento padre
+              contenedor cuya posicion sea RELATIVA
+  */
+  .posicionAbsoluta {
+    position: absolute;
+  }
+  
+  .cajaAbsoluta1 {
+    top: 0;
+    left: 120px;
+  }
+  
+  .contenedorRelativo {
+    width: 400px;
+    height: 350px;
+    border: 2px solid red;
+    background-color: #e3e3e3;
+  }
+  
+  .contenedorRelativo .posicionAbsoluta {
+    top: 0;
+    left: 0;
+  }
+  
+  /* position sticky
+    los elementos sticky es una combinacion 
+    entre position relative y absolute.
+    Comienzan siendo relativos, necesitan tener un 
+    padre contenedor, cuando hacemos scroll
+    dentro del padre contenedor, se hacen fixed dentro
+    se contenedor.
+  
+   */
+  .posicionSticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+  
+  .title {
+    background-color: #3498db;
+    padding: 10px;
+    color: white;
+  }
+  
+  .stickyContainer {
+    border: 5px solid #3498db;
+  }
+  
+  .boxAzul {
+    background-color: blue;
+  }
+  
+  .boxVerde {
+    background-color: green;
+  }
+  
+  .galeria {
+    width: 450px;
+    height: 300px;
+    border: 1px solid #e3e3e3;
+  }
+  
+  /* Animaciones y transiciones */
+  
+  /* Transiciones
+    las transiciones, hacen que el cambio
+    de propiedad de css como el background-color
+    al hacer hover se vea mas fluio 
+   */
+  .impressive-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 300ms ease, transform 300ms ease;
+  }
+  
+  .imgHover {
+    transition: all 500ms ease-in-out;
+  }
+  
+  .imgHover:hover {
+    filter: invert(0.8);
+  }
+  
+  .impressive-button:hover {
+    background-color: #5d85a0;
+    transform: scale(0.6);
+  }
+  
+  .container {
+    width: 650px;
+    height: 250px;
+    background-color: #e3e3e3;
+    position: relative;
+    padding: 20px;
+    margin: 50px 0;
+  }
+  
+  /* Animaciones */
+  
+  /* 
+    animacion css 
+    el nombre de la animacion de mover-cuadro
+    en las animaciones hay que definir lo que 
+    sucede en cada frame que compone la animacion
+  
+  */
+  
+  .circle {
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    border-radius: 50%;
+    position: absolute;
+    /* animation: 
+      nombre de la animacion, duracion, efecto, al usar infinite, nuestra animacion nunca se detendra */
+    animation: moveCircle 5s linear infinite reverse;
+    /* animation: moveCircle 4s linear infinite;  */
+    /* 4s duration, linear easing, infinite loop */
+  }
+  
+  @keyframes moveCircle {
+    0% {
+      left: 0;
+      background-color: red;
+    }
+    50% {
+      background-color: yellow;
+      left: 600px;
+      border-radius: 0;
+    }
+    100% {
+      background-color: #3498db;
+      left: 0;
+    }
+  }
+  
+  .mainContainer {
+    width: 800px;
+  }
