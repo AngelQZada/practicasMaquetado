@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Clase 2 Css</title>
+    <meta name="author" content="alan medina" />
+    <meta name="keywords" content="clase, css, estilos" />
+    <!-- estilos internos, van dentro de la etiqueta de style -->
+    <style>
+      p {
+        color: red;
+        text-decoration: underline;
+      }
+
+      p {
+        color: green;
+      }
+    </style>
+    <!-- hoja de estilos externos -->
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <!-- estilos inline o estios en linea -->
+    <h1 style="color: magenta; font-size: 40px">Clase CSS</h1>
+
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, quisquam
+      ducimus. Laborum, reprehenderit. Voluptatem, ab repudiandae. Suscipit,
+      eaque? Odit necessitatibus provident iure! Nihil necessitatibus illum
+      excepturi saepe soluta vel inventore?
+    </p>
+
+    <!-- selector de clase -->
+    <p class="parrafoAzul">parrafo 2 con la clase parrafoAzul</p>
+    <!-- selectores de id -->
+    <p class="parrafoAzul" id="parrafoAmarillo">parrafo 3 con selector de id</p>
+
+    <!-- lista desordenada -->
+    lista de elementos UL
+    <ul class="contenedorNegro">
+      <li>Elemento de la lista 1</li>
+      <li class="parrafoAzul">Elemento de la lista 2</li>
+    </ul>
+
+    <div>
+      <a href="#"> Enlace 1 </a>
+    </div>
+
+    <div class="contenedorNegro">
+      <a href="#"> Enlace 2 </a>
+    </div>
+  </body>
+</html>

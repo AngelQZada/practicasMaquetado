@@ -1,0 +1,62 @@
+/* color de fondo para spotify #1c1e1f */
+body {
+    background-color: #1c1e1f;
+  }
+  
+  ul {
+    list-style: none;
+    font-size: 50px;
+  }
+  
+  /* seleccionar mediante el selector de clase */
+  .parrafoAzul {
+    color: blue;
+    font-weight: 600;
+    font-size: 28px;
+  }
+  
+  /* seleccionar mediante el selector de ID */
+  #parrafoAmarillo {
+    color: yellowgreen;
+    font-size: 32px;
+  }
+  
+  div {
+    border: 1px solid red;
+    width: 160px;
+    height: 50px;
+  }
+  
+  .contenedorNegro {
+    padding: 20px;
+    padding: 10px 50px;
+    padding: 20px 40px 60px 120px;
+    border: 1px solid red;
+  }
+  
+  div.contenedorNegro {
+    background-color: black;
+    color: white;
+    margin: 30px 260px;
+    /* background: radial-gradient(
+      circle,
+      rgba(213, 39, 26, 1) 18%,
+      rgba(180, 129, 129, 0.8857114779874213) 70%
+    ); */
+  }
+  
+  div.contenedorNegro a {
+    color: white;
+  }
+  
+  /* pasos
+      crear hoja de estilos externa
+      referenciar la hoja de estilos
+      cambiar el color de fondo del body (#1c1e1f)
+      cambiar el color del texto de titulos y parrafos (#d1cdc7)
+      cambiar el color del texto de enlaces (#7deda5)
+   */
+  
+  /* traer cambios pendientes a la rama nueva
+  git checkout -b nombreRama
+  git branch nombreRama */
