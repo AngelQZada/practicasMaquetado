@@ -1,15 +1,20 @@
+/*Sirve para que al scrollear no se vea tan brusco */
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #1c1e1f;
 }
 
-.tityparrVerdes {
+h1,
+p,
+h5,
+h2 {
     color: #D1CDC7;
 }
 
-.enlVerde {
-    color: #7DEDA5;
-}
-
-.enlVerde a {
+li,
+a {
     color: #7DEDA5;
 }
