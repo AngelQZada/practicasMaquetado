@@ -1,0 +1,9 @@
+.listaCajas li{
+    width: 400px;
+    height: 100px;
+    background-color: rgb(235, 237, 239);
+    margin: 10px;
+    text-align: center;
+    list-style: none;
+    border-radius: 2%;
+}
