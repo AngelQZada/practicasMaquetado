@@ -1,0 +1,60 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        background-color: blue;
+    }
+    .tablet,
+    .desktop,
+    .desktopXL {
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background-color: green;
+    }
+    .mobile,
+    .desktop,
+    .desktopXL {
+        display: none;
+    }
+    .tablet{
+        display: block;
+    }
+}
+
+@media screen and (min-width: 992px){
+    body {
+        background-color: red;
+    }
+    .mobile,
+    .tablet,
+    .desktopXL{
+        display: none;
+    }
+    .desktop{
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        background-color: burlywood;
+    }
+    .mobile,
+    .tablet,
+    .desktop{
+        display: none;
+    }
+    .desktopXL{
+        display: block;
+    }
+}
