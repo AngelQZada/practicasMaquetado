@@ -1,9 +1,29 @@
 .listaCajas li{
-    width: 400px;
-    height: 100px;
+    width: 260px;
+    height: 60px;
     background-color: rgb(235, 237, 239);
-    margin: 10px;
+    margin: 10px auto;
     text-align: center;
     list-style: none;
     border-radius: 2%;
+}
+
+.listaCajas li::before{
+    content: "💬";
+}
+
+.listaCajas :nth-child(1)::after{
+    content: "😍";
+}
+
+.listaCajas :nth-child(2)::after{
+    content: "🤔";
+}
+
+.listaCajas :nth-child(3)::after{
+    content: "👏";
+}
+
+.container {
+    margin: 0 auto;
 }
