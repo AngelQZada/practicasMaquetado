@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.itemGaleria{
+    width: 150px;
+    height: 200px;
+    text-align: center;
+    border: 2px solid brown;
+    border-radius: 3%;
+    position: absolute;
+}
+
+ul{
+   list-style: none; 
+}
+
+.contenedorRelativo{
+    width: 490px;
+    height: 430px;
+    background-color: rgb(51, 238, 238);
+    position: relative;
+}
+
+.itemGaleria1{
+    top: 10px;
+    left: 10px;
+}
+
+.itemGaleria2{
+    top: 10px;
+    left: 170px;
+}
+
+.itemGaleria3{
+    top: 10px;
+    left: 330px;
+}
+
+.itemGaleria4{
+    top: 220px;
+    left: 10px;
+}
+
+.itemGaleria5{
+    top: 220px;
+    left: 170px;
+}
+
+.itemGaleria6{
+    top: 220px;
+    left: 330px;
+}
