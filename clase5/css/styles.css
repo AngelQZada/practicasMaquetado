@@ -2,4 +2,111 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+  }
+  
+  .articuloNoResponsive {
+    width: 800px;
+    min-width: 800px;
+    height: 400px;
+    padding: 20px;
+    background-color: red;
+    color: white;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  .articuloResponsive {
+    width: 100%;
+    margin-top: 40px;
+    min-height: 400px;
+    padding: 20px;
+    background-color: blue;
+    color: white;
+  }
+  
+  .resposiveChild1 {
+    width: 15%;
+    border: 1px solid #000;
+    height: 200px;
+    /* hace que el div se pueda alinear de forma horizontal */
+    display: inline-block;
+  }
+  
+  .resposiveChild2 {
+    width: 66%;
+    border: 1px solid #000;
+    height: 200px;
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .resposiveChild3 {
+    width: 15%;
+    border: 1px solid #000;
+    height: 200px;
+    display: inline-block;
+  }
+  
+  /* Dispositivos Extra pequeños (smartphones pequeños, 600px para abajo) */
+  @media screen and (max-width: 600px) {
+    .articuloNoResponsive {
+      background-color: green;
+    }
+  
+    .resposiveChild1,
+    .resposiveChild2,
+    .resposiveChild3 {
+      width: 100%;
+      margin: 0;
+    }
+  }
+  
+  /* estado base */
+  /* la pagina debe ser negrar */
+  
+  /* (tablets en vertical(portrait) y celulares mas grandes, 600px en adelante) */
+  @media screen and (min-width: 600px) {
+    /* aqui hay que ocultar todos los que no sean mobile 
+    (visibleTablet, visibleDesktop y visibleDesktopXL ) */
+  }
+  
+  /* (tablets en horizontal (landscape), 768px en adelante) */
+  @media screen and (min-width: 768px) {
+    /* la pagina debe ser verde */
+    /* aqui hay que ocultar todos los que no sean tablet */
+    .visibleMobile {
+      display: none;
+    }
+  
+    .visibleDesktop {
+      display: none;
+    }
+  }
+  
+  /* (laptops/monitores pequeñas, 992px en adelante) */
+  @media screen and (min-width: 992px) {
+    /* aqui hay que ocultar todos los que no sean desktop */
+    /* como la clase .visibleDesktop esta oculta en pantallas de mobile
+    y tablet, la regresamos a la vista al modificar la propiedad display 
+    a "block" */
+    .visibleDesktop {
+      display: block;
+    }
+  
+    /* el texto que debe ser visible en tablet, debe estar escondido en
+     desktop, por lo tanto cuando estamos en el mediaquery de desktop
+     lo ocultamos al modificar su propiedad display a "none"
+     */
+    .visibleTablet {
+      display: none;
+    }
+  }
+  
+  /* (laptops/monitores pequeñas, 992px en adelante) */
+  @media screen and (min-width: 1440px) {
+    /* la pagina debe ser cafe */
+    .visibleDesktopXL {
+      display: block;
+    }
+    /* display:inline */
+  }

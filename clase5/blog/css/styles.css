@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: linear-gradient(rgb(70, 76, 79), rgb(35, 38, 39));
+    min-height: 100vh;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+  }
+  
+  /* Estilos base, estos estilos aplican primero para mobile
+      despues, con los media queries, vamos cambiando los estilos
+      para las demas pantallas
+   */
+  
+  main {
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .articles {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .articleItem {
+    background-color: #181a1b;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+    display: block;
+  }
+  
+  .articleItem img {
+    width: 85%;
+    margin: 10px auto;
+    display: block;
+  }
+  
+  .articleItem span,
+  .articleItem h4 {
+    margin: 10px;
+  }
+  
+  .postDate {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  .postTitle {
+    font-weight: 600;
+    font-size: 20px;
+  }
+  
+  /* tablets */
+  @media screen and (min-width: 768px) {
+    .mainTitle {
+      font-size: 40px;
+    }
+  
+    .articleItem {
+      width: 45%;
+      display: inline-block;
+      margin: 15px 10px;
+    }
+  }
+  
+  /* desktop 2 filas de 34*/
