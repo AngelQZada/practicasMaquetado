@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* hace que las dimensiones sean mas exactas
+         hace que el padding y el border pasen a 
+         formar parte del cálculo del ancho de la 
+         caja y no lo suman posteriormente.
+       */
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  .container {
+    width: 80%;
+    min-height: 700px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 10px solid #000;
+    position: relative;
+  }
+  
+  .cajaRoja {
+    width: 100px;
+    height: 100px;
+    background-color: #fb7185;
+    padding: 1em;
+    font-weight: 900;
+    color: #f1f5f9;
+    text-align: center;
+    border: 10px solid #e11d48;
+  
+    border-radius: 10px;
+    margin: 10px 0;
+  }
+  
+  /* Estilos de Flexbox */
+  .containerFlex {
+    /* display:flex, convierte el contenedor en una caja flexbible */
+    display: flex;
+    /* direcciones: row, row-reverse, column, column-reverse*/
+    flex-direction: row;
+    /* justify-content, determina 
+      como se distribuyen los elementos 
+      en el main axis (horizontal) del contenedor
+      flex-start, flex-end, center, 
+      space-around, space-between, space-evenly
+  */
+    justify-content: flex-start;
+    /* 
+      align-items, determina como se
+      distribuyen los elementos
+      en el cross axis (vertical) del 
+      contenedor dentro de la fila
+      flex-start, flex-end, center
+     */
+    align-items: center;
+    /* cuando los elementos hijo del contenedor 
+      exceden las medidas de su padre, 
+      flex:wrap hace que se distribuyan en multiple
+      filas de forma automatica
+     */
+    flex-wrap: wrap;
+    /* si tenemos habilitado flex:wrap, entonces, 
+      se habilita la propiedad align-content, con la cual 
+      podemos alinear verticalmente las filas creadas
+      con flex:wrap wrap
+     */
+    align-content: center;
+  }
+  
+  /* flex container con direccion en columna 
+      IMPORTANTE
+      cuando usamos flex-direction: column;
+      los main axis y cross axis, se INVIERTEN.
+      en direction:column, 
+          el main axis es el eje vertical
+          el cross axis es el eje horizontal
+  */
+  .containerFlexCol {
+    display: flex;
+    flex-direction: column;
+    /* en las columnas, como los ejes han sido invertidos 
+      align-items, distribuye las columnas de forma horizontal
+      */
+    align-items: flex-end;
+    justify-content: space-around;
+  }
+  
+  .containerFlexRow2 {
+    display: flex;
+    /* gap determina la separacion entre los hijos del contenedor flex */
+    gap: 10%;
+  }
+  
+  .containerFlexRow2 .cajaRoja {
+    height: auto;
+  }
+  
+  /* cambiar orden de elementos */
+  /* order: nos permite cambiar el 
+      orden de los elementos hijo dentro 
+      del contendor flex  
+      Descomentar para verlo funcionar.
+  
+      order: -1 pone al elemento en la primera 
+      posicion.
+  
+  */
+  /* .containerFlexRow2 .cajaRoja1 {
+    order: 3;
+  }
+  
+  .containerFlexRow2 .cajaRoja3 {
+    order: 1;
+  } 
+  
+  .containerFlexRow2 .cajaRoja2 {
+    order: -1;
+  } 
+  */
+  
+  /* flex: 1
+    es lo mismo que definir las propiedades
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+  
+      flex-shrink determina cuanto se puede encoger un elemento
+      flex-basis: funciona como la propiedad width, pero solo para
+        elementos flex.
+   */
+  
+  .cajaRoja1,
+  .cajaRoja2,
+  .cajaRoja3 {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    /* flex: 1; */
+  }
+  
+  /* propiedad flex-grow
+      flex-grow, le dice al contendor
+      flex que tanto pueden crecer los 
+      elementos hijo del contenedor flex
+      el valor indica la prioridad con la que crece
+   */
+  .cajaRoja1 {
+    flex-grow: 1;
+  }
+  
+  .cajaRoja2 {
+    flex-grow: 3;
+  }
+  
+  .cajaRoja3 {
+    flex-grow: 1;
+  }
+  
+  /* ejes de colores para ejemplo */
+  .axis {
+    position: absolute;
+    z-index: 20;
+  }
+  
+  .cross-axis {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 100%;
+    background-color: blue;
+  }
+  
+  .main-axis {
+    top: 50%;
+    transform: translateY(-50%);
+    height: 5px;
+    width: 100%;
+    background-color: red;
+  }
+  
+  .main-axis-col {
+    background-color: blue;
+  }
+  .cross-axis-col {
+    background-color: red;
+  }
+  
+  .axis::after {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 2em;
+  }
+  
+  .main-axis::after {
+    position: absolute;
+    content: "Main Axis";
+    color: red;
+  }
+  
+  .cross-axis::after {
+    white-space: nowrap;
+    content: "Cross Axis";
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: blue;
+  }
+  
+  .main-axis-col::after {
+    position: absolute;
+    content: "Cross Axis";
+    color: blue;
+  }
+  
+  .cross-axis-col::after {
+    white-space: nowrap;
+    content: "Main Axis";
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: orange;
+  }
+  
+  /* 
+  filas 
+    flex-start
+    center
+    flex-end
+    space-between
+    space-around
+    space-evenly
+  */
+  
+  /* 
+  columns 
+    flex-start
+    center
+    flex-end
+    space-between
+    space-around
+    space-evenly
+  */

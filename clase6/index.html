@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Flexbox Example</title>
+  </head>
+  <body>
+    <!-- section flex con hijos directos -->
+    <h2>flex direction: Row</h2>
+    <section class="container containerFlex">
+      <div class="cajaRoja item-1">Item 4</div>
+      <div class="cajaRoja item-2">Item 5</div>
+      <div class="cajaRoja item-3">Item 6</div>
+
+      <!--  -->
+      <div class="cajaRoja item-1">Item 7</div>
+      <div class="cajaRoja item-2">Item 8</div>
+      <div class="cajaRoja item-3">Item 9</div>
+
+      <div class="cajaRoja item-1">Item 10</div>
+      <div class="cajaRoja item-2">Item 11</div>
+      <div class="cajaRoja item-3">Item 12</div>
+
+      <div class="axis main-axis"></div>
+      <div class="axis cross-axis"></div>
+    </section>
+    <!--  -->
+
+    <!-- contenedor flex con subfilas -->
+    <section class="container containerFlexCol">
+      <div class="containerFlex">
+        <div class="cajaRoja item-1">Item 1</div>
+        <div class="cajaRoja item-2">Item 2</div>
+        <div class="cajaRoja item-3">Item 3</div>
+      </div>
+
+      <div class="containerFlex">
+        <div class="cajaRoja item-1">Item 1</div>
+        <div class="cajaRoja item-2">Item 2</div>
+        <div class="cajaRoja item-3">Item 3</div>
+      </div>
+
+      <div class="axis main-axis"></div>
+      <div class="axis cross-axis"></div>
+    </section>
+
+    <!-- contenedor flex columns -->
+    <h2>flex direction: column</h2>
+    <section class="container containerFlexCol">
+      <div class="cajaRoja item-1">Item 1</div>
+      <!-- <div class="cajaRoja item-2">Item 2</div>
+      <div class="cajaRoja item-3">Item 3</div> -->
+      <!--  -->
+      <div class="cajaRoja item-1">Item 4</div>
+      <div class="cajaRoja item-2">Item 5</div>
+      <div class="cajaRoja item-3">Item 6</div>
+
+      <!--  -->
+
+      <div class="axis main-axis main-axis-col"></div>
+      <div class="axis cross-axis cross-axis-col"></div>
+    </section>
+
+    <!-- contenedor flex row con elementos streteched  -->
+    <h2>flex direction: row</h2>
+    <section class="container containerFlexRow2">
+      <div class="cajaRoja">Item 1</div>
+
+      <div class="cajaRoja">Item 4</div>
+      <div class="cajaRoja">Item 5</div>
+      <div class="cajaRoja">Item 6</div>
+
+      <div class="axis main-axis main-axis-col"></div>
+      <div class="axis cross-axis cross-axis-col"></div>
+    </section>
+
+    <h2>flex direction: row</h2>
+    <section class="container containerFlexRow2">
+      <div class="cajaRoja cajaRoja1">Item 1</div>
+
+      <div class="cajaRoja cajaRoja2">Item 2</div>
+    </section>
+  </body>
+</html>
